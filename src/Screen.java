@@ -79,8 +79,11 @@ public class Screen extends JPanel implements ActionListener {
         step();
     }
 
-    /** Move the paddles and repaint
+    /** Move the paddles and ball and repaints
      *  the screen to show new positions.
+     *  Also calls the methods to see
+     *  whether the ball has hit the paddle
+     *  or scored.
      */
     private void step(){
         leftPaddle.move();
