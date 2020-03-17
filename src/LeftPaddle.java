@@ -36,7 +36,7 @@ public class LeftPaddle implements Paddle {
 
     /** Checks to see whether the paddle hit the
      *  top or bottom of the screen. If so reset the
-     *  y position so it is on the screen
+     *  Y position so it is on the screen
      */
     private void paddleOut(){
         if(getY() <= 0){
