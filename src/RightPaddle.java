@@ -35,6 +35,20 @@ public class RightPaddle implements Paddle {
     /** Move the Paddle up or down. */
     public void move(){
         y += dy;
+        paddleOut();
+    }
+
+    /** Checks to see whether the paddle hit the
+     *  top or bottom of the screen. If so reset the
+     *  y position so it is on the screen
+     */
+    private void paddleOut(){
+        if(getY() <= 0){
+            y = 0;
+        }
+        else if(getY() >= 600){
+            y = 600;
+        }
     }
 
     /** Sees which key was pressed and moves the

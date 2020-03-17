@@ -93,6 +93,8 @@ public class Ball {
     public int getX(){ return x;}
     /** Get image y value. */
     public int getY(){ return y;}
+    /** Get the y velocity */
+    public int getDY(){ return dy;}
     /** Get image width. */
     public int getWidth(){ return h;}
     /** Get image height. */

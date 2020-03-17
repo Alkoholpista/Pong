@@ -28,14 +28,30 @@ public class LeftPaddle implements Paddle {
     }
 
     /** Move the paddle up or down. */
+    @Override
     public void move(){
         y += dy;
+        paddleOut();
     }
 
-    /** Sees which key was pressed and moves
+    /** Checks to see whether the paddle hit the
+     *  top or bottom of the screen. If so reset the
+     *  y position so it is on the screen
+     */
+    private void paddleOut(){
+        if(getY() <= 0){
+            y = 0;
+        }
+        else if(getY() >= 600){
+            y = 600;
+        }
+    }
+
+  /**  /** Sees which key was pressed and moves
      *  the player accordingly.
      *  @param e The key event
      */
+    @Override
     public void keyPressed(KeyEvent e){
         int key = e.getKeyCode();
 
@@ -53,6 +69,7 @@ public class LeftPaddle implements Paddle {
      *  paddle in that direction.
      *  @param e The key event
      */
+    @Override
     public void keyReleased(KeyEvent e){
         int key = e.getKeyCode();
 
@@ -62,12 +79,16 @@ public class LeftPaddle implements Paddle {
     }
 
     /** Get image x value. */
+    @Override
     public int getX(){ return x;}
     /** Get image y value. */
+    @Override
     public int getY(){ return y;}
     /** Get image width. */
+    @Override
     public int getWidth(){ return w;}
     /** Get image height. */
+    @Override
     public int getHeight(){ return h;}
     /** Get Paddle image. */
     public Image getImage(){ return image;}
