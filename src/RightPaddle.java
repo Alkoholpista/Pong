@@ -33,6 +33,7 @@ public class RightPaddle implements Paddle {
     }
 
     /** Move the Paddle up or down. */
+    @Override
     public void move(){
         y += dy;
         paddleOut();
@@ -55,6 +56,7 @@ public class RightPaddle implements Paddle {
      *  paddle up or down accordingly
      *  @param e The key event
      */
+    @Override
     public void keyPressed(KeyEvent e){
         int key = e.getKeyCode();
 
@@ -72,6 +74,7 @@ public class RightPaddle implements Paddle {
      *  moving the paddle in that direction
      *  @param e The key event
      */
+    @Override
     public void keyReleased(KeyEvent e){
         int key = e.getKeyCode();
 
@@ -82,12 +85,16 @@ public class RightPaddle implements Paddle {
     }
 
     /** Get image x value. */
+    @Override
     public int getX(){ return x;}
     /** Get paddle y value. */
+    @Override
     public int getY(){ return y;}
     /** Get paddle width. */
+    @Override
     public int getWidth(){ return w;}
     /** Get paddle height. */
+    @Override
     public int getHeight(){ return h;}
     /** Return the paddle image. */
     public Image getImage(){ return image;}
