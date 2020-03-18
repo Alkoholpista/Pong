@@ -86,9 +86,10 @@ public class Screen extends JPanel implements ActionListener {
      *  or scored.
      */
     private void step(){
+        ball.move();
+        leftPaddle.setBallDy(ball.getDY());
         leftPaddle.move();
         rightPaddle.move();
-        ball.move();
         hitPaddle();
         scored();
         repaint();
