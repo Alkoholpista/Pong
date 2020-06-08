@@ -3,7 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="5e1d3ebb-ebfd-4cb0-9b64-9c418763d2e0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/Ball.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/Ball.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/LeftPaddle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/LeftPaddle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/RightPaddle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/RightPaddle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/Screen$TAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/Screen$TAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/Screen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LeftPaddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LeftPaddle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RightPaddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RightPaddle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Screen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +38,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../One-person-PONG-master" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunManager">
     <configuration name="Pong" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -65,13 +75,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="836" y="445" width="308" height="223" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584045468991">
@@ -82,26 +91,30 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="589" y="83" width="802" height="947" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1584479218137" />
-    <state x="778" y="311" width="416" height="498" key="FileChooserDialogImpl" timestamp="1584479749932">
+    <state x="778" y="311" width="416" height="498" key="FileChooserDialogImpl" timestamp="1584557375850">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="778" y="311" width="416" height="498" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1584479749932" />
-    <state width="1804" height="275" key="GridCell.Tab.0.bottom" timestamp="1584554710825">
-      <screen x="70" y="27" width="1850" height="1053" />
+    <state x="778" y="311" width="416" height="498" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1584557375850" />
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom" timestamp="1591587339981">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1804" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1584554710825" />
-    <state width="1804" height="275" key="GridCell.Tab.0.center" timestamp="1584554710825">
-      <screen x="70" y="27" width="1850" height="1053" />
+    <state width="1804" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1584557376964" />
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1591587339981" />
+    <state width="1802" height="275" key="GridCell.Tab.0.center" timestamp="1591587339981">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1804" height="275" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1584554710825" />
-    <state width="1804" height="275" key="GridCell.Tab.0.left" timestamp="1584554710825">
-      <screen x="70" y="27" width="1850" height="1053" />
+    <state width="1804" height="275" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1584557376963" />
+    <state width="1802" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1591587339981" />
+    <state width="1802" height="275" key="GridCell.Tab.0.left" timestamp="1591587339980">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1804" height="275" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1584554710825" />
-    <state width="1804" height="275" key="GridCell.Tab.0.right" timestamp="1584554710825">
-      <screen x="70" y="27" width="1850" height="1053" />
+    <state width="1804" height="275" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1584557376963" />
+    <state width="1802" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1591587339980" />
+    <state width="1802" height="275" key="GridCell.Tab.0.right" timestamp="1591587339981">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1804" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1584554710825" />
+    <state width="1804" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1584557376964" />
+    <state width="1802" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1591587339981" />
     <state x="651" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1584545284298">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>

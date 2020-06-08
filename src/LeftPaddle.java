@@ -12,8 +12,6 @@ public class LeftPaddle implements Paddle {
     private int w;
     private int h;
     private Image image; // Dimensions width: 36px, height: 174px
-    private int score = 0;
-    private int balldy;
 
     // Constructor
     /** Create an instance of LeftPaddle. */
@@ -31,7 +29,7 @@ public class LeftPaddle implements Paddle {
     /** Move the paddle up or down. */
     @Override
     public void move(){
-        y += getBallDy();
+        y += dy;
         paddleOut();
     }
 
@@ -46,20 +44,6 @@ public class LeftPaddle implements Paddle {
         else if(getY() >= 600){
             y = 600;
         }
-    }
-
-    /** Set the dy value of the ball
-     *  @param balldy The dy value of the ball
-     */
-    public void setBallDy(int balldy){
-        this.balldy = balldy;
-    }
-
-    /**The dy value of the ball
-     * @return the dy value of the ball
-     */
-    public int getBallDy(){
-        return balldy;
     }
 
   /**  /** Sees which key was pressed and moves
@@ -107,8 +91,6 @@ public class LeftPaddle implements Paddle {
     public int getHeight(){ return h;}
     /** Get Paddle image. */
     public Image getImage(){ return image;}
-    /** This paddle scored, increment score. */
-    public void scored(){ score++;}
-    /** Get the score for the left paddle. */
-    public String getScore(){ return Integer.toString(score);}
+    /** Return the y-axis velocity of the paddle. */
+    public int getYVelocity(){ return dy;}
 }

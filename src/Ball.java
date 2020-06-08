@@ -13,7 +13,6 @@ public class Ball {
     private int w;
     private int h;
     private Image image; // Dimensions width: 86px, height: 90px
-    private Random random;
 
     // Constructor
     /** Create an instance of Ball. */
@@ -55,12 +54,14 @@ public class Ball {
     /** Hit one of the paddles, x direction of the
      *  ball needs to be flipped.
      *  @param paddle Which paddle the ball hit*/
-    public void hitPaddle(String paddle){
+    public void hitPaddle(String paddle, int paddleVelocity){
         if(paddle.equals("l")){
             dx = Math.abs(dx);
+            dy += paddleVelocity;
         }
         else if(paddle.equals("r")){
-            dx = 0 - dx;
+            dx = -dx;
+            dy += paddleVelocity;
         }
     }
 

@@ -19,6 +19,8 @@ public class Screen extends JPanel implements ActionListener {
     private Timer timer;
     private LeftPaddle leftPaddle;
     private RightPaddle rightPaddle;
+    private int leftPaddleScore = 0;
+    private int rightPaddleScore = 0;
     private Ball ball;
     private final int DELAY = 10;
     private int paddleHits = 0;
@@ -67,8 +69,8 @@ public class Screen extends JPanel implements ActionListener {
         Font f = new Font("TimesRoman", Font.PLAIN, 48);
         g.setFont(f);
         g.setColor(Color.WHITE);
-        g2d.drawString(leftPaddle.getScore(), 450, 50);
-        g2d.drawString(rightPaddle.getScore(), 570, 50);
+        g2d.drawString(Integer.toString(leftPaddleScore), 450, 50);
+        g2d.drawString(Integer.toString(rightPaddleScore), 570, 50);
     }
 
     /** Perform the action which is a step.
@@ -87,7 +89,6 @@ public class Screen extends JPanel implements ActionListener {
      */
     private void step(){
         ball.move();
-        leftPaddle.setBallDy(ball.getDY());
         leftPaddle.move();
         rightPaddle.move();
         hitPaddle();
@@ -101,12 +102,12 @@ public class Screen extends JPanel implements ActionListener {
     private void hitPaddle(){
         if((ball.getX() >= rightPaddle.getX() - 85) && ((ball.getY() < rightPaddle.getY() + 169 && ball.getY() > rightPaddle.getY())
         || (ball.getY() + 85 > rightPaddle.getY() && ball.getY() + 85 < rightPaddle.getY() + 169))){
-            ball.hitPaddle("r");
+            ball.hitPaddle("r", rightPaddle.getYVelocity());
             paddleHits++;
         }
         else if((ball.getX() <= leftPaddle.getX() + 36) && ((ball.getY() < leftPaddle.getY() + 169 && ball.getY() > leftPaddle.getY())
         || (ball.getY() + 85 > leftPaddle.getY() && ball.getY() + 85 < leftPaddle.getY() + 169))){
-            ball.hitPaddle("l");
+            ball.hitPaddle("l", leftPaddle.getYVelocity());
             paddleHits++;
         }
 
@@ -121,7 +122,7 @@ public class Screen extends JPanel implements ActionListener {
         if(ball.getX() < 0){
             // Increment the score of the right side/paddle
             // by one
-            rightPaddle.scored();
+            rightPaddleScore++;
             // Set the ball back to the starting position
             ball.reset();
             // reset the speed and direction of the ball
@@ -136,7 +137,7 @@ public class Screen extends JPanel implements ActionListener {
         else if(ball.getX() > 1100){
             // Increment the score of the left side/paddle
             // by one
-            leftPaddle.scored();
+            leftPaddleScore++;
             // Set the ball back to the starting position
             ball.reset();
             // Reset the speed and direction of the ball

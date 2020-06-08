@@ -15,7 +15,6 @@ public class RightPaddle implements Paddle {
     // w: 36px
     // h: 174px
     private Image image; // Dimensions width: 36px, height: 174px
-    private int score = 0;
 
     // Constructor
     /** Create instance of RightPaddle. */
@@ -98,8 +97,6 @@ public class RightPaddle implements Paddle {
     public int getHeight(){ return h;}
     /** Return the paddle image. */
     public Image getImage(){ return image;}
-    /** This paddle scored, increment score. */
-    public void scored(){ score++;}
-    /** Return the score for the right paddle. */
-    public String getScore(){ return Integer.toString(score);}
+    /** Return the y-axis velocity of the paddle. */
+    public int getYVelocity(){ return dy;}
 }
