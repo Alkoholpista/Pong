@@ -125,6 +125,9 @@ public class Screen extends JPanel implements ActionListener {
             rightPaddleScore++;
             // Set the ball back to the starting position
             ball.reset();
+            // Set the paddles back to the center vertically
+            rightPaddle.reset();
+            leftPaddle.reset();
             // reset the speed and direction of the ball
             // to a random speed and direction
             ball.randomSpeed();
@@ -140,6 +143,9 @@ public class Screen extends JPanel implements ActionListener {
             leftPaddleScore++;
             // Set the ball back to the starting position
             ball.reset();
+            // Set the paddles back to the center vertically
+            rightPaddle.reset();
+            leftPaddle.reset();
             // Reset the speed and direction of the ball
             // to a random speed and direction
             ball.randomSpeed();

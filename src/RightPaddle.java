@@ -7,8 +7,9 @@ public class RightPaddle implements Paddle {
 
     // Data Fields
     private int dy;
+    private int startY = 300;
     private int x =1064;
-    private int y = 346;
+    private int y = startY;
     private int w;
     private int h;
     // Dimensions
@@ -49,6 +50,13 @@ public class RightPaddle implements Paddle {
         else if(getY() >= 600){
             y = 600;
         }
+    }
+
+    /** Sets the paddle back to the center
+     *  vertically
+     */
+    public void reset() {
+        y = startY;
     }
 
     /** Sees which key was pressed and moves the
